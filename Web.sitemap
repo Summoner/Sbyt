@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+
+
+  <siteMapNode>
+    <siteMapNode url="~\Default.aspx"
+      title="Домашняя"
+      description="Домашняя страница"/>
+    <siteMapNode 
+      title="Администрирование"
+      description="Администрирование">
+      <siteMapNode url="~\Administration.aspx"
+        title="Сравнение привязки"
+        description="Сравнение привязки"/>
+      <siteMapNode url="~\BalancePoTpAdmin.aspx"
+        title="Оплаты по ТП"
+        description="Оплаты по ТП"/>
+      <siteMapNode url="~\Balance.aspx"
+        title="Оплаты по линии"
+        description="Оплаты по линии"/>
+    </siteMapNode>
+    <siteMapNode 
+      title="Отчеты"
+      description="Отчеты">
+      <siteMapNode url="~\Reports.aspx"
+        title="Сравнение привязки"
+        description="Сравнение привязки"/>
+      <siteMapNode url="~\BalancePoTpDefault.aspx"
+        title="Оплаты по ТП"
+        description="Оплаты по ТП"/>      
+    </siteMapNode>
+    
+    <siteMapNode url="~\About.aspx"
+      title="О программе"
+      description="О программе"/>
+  </siteMapNode>
+
+  
+    
+    
+    
+  
+</siteMap>

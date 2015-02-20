@@ -1,0 +1,178 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"  CodeBehind="Sbyt.master.cs" Inherits="Sbyt.Sbyt"  %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+  <link rel = "Stylesheet" href="Css/style.css" type="text/css" />
+  <script type="text/javascript" src="../scripts/jquery.js"></script>
+  <script type="text/javascript"  src="../scripts/hoverIntent.js"></script>
+ <script  type="text/javascript"  src="../scripts/superfish.js"></script>
+
+ <script type="text/javascript">
+
+     jQuery(function () {
+         jQuery('ul.sf-menu').superfish();
+     });
+ </script>
+
+</head>
+
+<body>
+
+    <form id="Main" runat="server">
+
+<div id="page">
+    <div id="header">
+	<div id="company_name"><span>Столбцовские<br />
+        </span>электрические сети<br /></div>
+	<div id="callus"><span>Call us:</span> 8 01717 49 2 44</div>
+</div>
+<div id="menu">
+
+  <div id="menuposition">
+  
+<ul class="sf-menu">
+<li>
+  <a  href="Default.aspx">Домашняя</a>
+  </li>
+
+
+  <li class="current">
+  <a  href="#a">Администрирование</a>
+  <ul>
+  <li>
+  <a href="Administration.aspx">Сравнение привязки</a>
+  
+  </li>
+  <li class="current">
+  <a  href="BalancePoTpAdmin.aspx">Оплаты по ТП</a>
+                                   
+  </li>
+  <li>
+  <a  href="Balance.aspx">Оплаты по линии</a>
+  </li>
+  </ul>
+  </li>
+  
+  <li>
+  <a href="#">Отчеты</a>
+      <ul>
+         <li>
+            <a  href="Reports.aspx">Сравнение привязки</a>
+               
+         </li>
+          <li>
+             <a  href="#">Оплаты по ТП</a>
+                <ul>
+                    <li>
+                       <a  href="UzdaBalancePoTp.aspx">Узденский РЭС</a>
+                   </li>
+                
+                    <li>
+                       <a  href="KleckBalancePoTp.aspx">Клецкий РЭС</a>
+                   </li>
+
+                   <li>
+                       <a  href="DergBalancePoTp.aspx">Дзержинский РЭС</a>
+                   </li>
+
+                   <li>
+                       <a  href="StolbBalancePoTp.aspx">Столбцовский РЭС</a>
+                   </li>
+
+                   <li>
+                       <a  href="NesvBalancePoTp.aspx">Несвижский РЭС</a>
+                   </li>
+                </ul>
+
+          </li>
+
+
+
+          <li>
+             <a  href="#">Оплаты по ВЛ</a>
+                <ul>
+                    <li>
+                       <a  href="UzdaBalancePoVL.aspx">Узденский РЭС</a>
+                   </li>
+                
+                    <li>
+                       <a  href="KleckBalancePoVL.aspx">Клецкий РЭС</a>
+                   </li>
+
+                   <li>
+                       <a  href="DergBalancePoVL.aspx">Дзержинский РЭС</a>
+                   </li>
+
+                   <li>
+                       <a  href="StolbBalancePoVL.aspx">Столбцовский РЭС</a>
+                   </li>
+
+                   <li>
+                       <a  href="NesvBalancePoVL.aspx">Несвижский РЭС</a>
+                   </li>
+                </ul>
+
+          </li>
+
+          
+     </ul>
+  </li>
+
+
+
+  <li class="current">
+  <a  href="#a">Ошибки программы</a>
+  <ul>
+  <li class="current">
+  <a  href="LogViewProgramm.aspx">Общие ошибки</a>
+  </li>
+  </ul>
+  </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <li>
+  <a  href="About.aspx">О программе</a>
+  </li>
+  
+  </ul>
+
+  </div>
+
+</div>
+<div id="contentwrap">
+<asp:ContentPlaceHolder ID="MainContent" runat="server">
+<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+        <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+        <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+       
+</asp:ContentPlaceHolder>
+</div>
+
+<div id ="footer">
+	<div id="bottom_menu"><a href="Default.aspx">Домашняя</a> |  <a href="#">Администрирование</a> |  <a href="#">Отчеты</a> |  <a href="#">Ошибки программы</a> |  <a href="About.aspx">О программе</a> </div>
+	<div id="bottom_addr">© 2011 Developed by Andrey Tur +375297559177. All Rights Reserved<br />Designed by <a href="http://anvisionwebtemplates.com/" target="_blank">Anvision Web Templates</a> &amp; <a href="http://webdesignfinders.net/" target="_blank">Webdesignfinders.net</a></div>
+</div>
+</div>
+    
+
+    
+</form>
+    
+</body>
+
+</html>

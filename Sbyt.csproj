@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D5A0164-A08B-4537-8A0C-C2268CCD7613}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sbyt</RootNamespace>
+    <AssemblyName>Sbyt</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MyXls.SL2">
+      <HintPath>Dll\MyXls.SL2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Administration.aspx" />
+    <Content Include="Balance.aspx" />
+    <Compile Include="App_Service\ChekODBCColumns.cs" />
+    <Compile Include="App_Service\CreatingWebControlsParts.cs" />
+    <Compile Include="App_Service\LINQtoDataSetMethods.cs" />
+    <Compile Include="App_Service\ObjectShredder.cs" />
+    <Compile Include="App_Service\SearchOra.cs" />
+    <Compile Include="App_Service\TimePeriod.cs" />
+    <Compile Include="Balance_Po_TP\DergBLLTPs.cs" />
+    <Compile Include="Balance_Po_TP\DergOracleTpProvider.cs" />
+    <Content Include="DergBalancePoTp.aspx" />
+    <Content Include="DergBalancePoVL.aspx" />
+    <Content Include="DergOplatiPoTp.aspx" />
+    <Content Include="DergOplatiPoVL.aspx" />
+    <Content Include="DergSearchResults.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\error404.jpg" />
+    <Content Include="images\search.png" />
+    <Content Include="images\searchbtn.png" />
+    <Content Include="KleckBalancePoTp.aspx" />
+    <Content Include="BalancePoTpAdmin.aspx" />
+    <Content Include="Css\style.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="KleckBalancePoVL.aspx" />
+    <Content Include="KleckOplatiPoVL.aspx" />
+    <Content Include="KleckOplatiPoTp.aspx" />
+    <Content Include="KleckSearchResults.aspx" />
+    <Content Include="LogViewProgramm.aspx" />
+    <Content Include="NesvBalancePoTp.aspx" />
+    <Content Include="NesvBalancePoVL.aspx" />
+    <Content Include="NesvOplatiPoVL.aspx" />
+    <Content Include="NesvOplatiPoTp.aspx" />
+    <Content Include="NesvSearchResults.aspx" />
+    <Content Include="Reports.aspx" />
+    <Content Include="StolbSearchResults.aspx" />
+    <Content Include="UzdaSearchResults.aspx" />
+    <Content Include="StolbBalancePoTp.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="StolbBalancePoVL.aspx" />
+    <Content Include="StolbOplatiPoVL.aspx" />
+    <Content Include="StolbOplatiPoTp.aspx" />
+    <Content Include="UzdaBalancePoTp.aspx" />
+    <Content Include="UzdaBalancePoVL.aspx" />
+    <Content Include="UzdaOplatiPoVL.aspx" />
+    <Content Include="UzdaOplatiPoTp.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration.aspx.cs">
+      <DependentUpon>Administration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration.aspx.designer.cs">
+      <DependentUpon>Administration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Service\StringConvert.cs" />
+    <Compile Include="Balance.aspx.cs">
+      <DependentUpon>Balance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Balance.aspx.designer.cs">
+      <DependentUpon>Balance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BalancePoTpAdmin.aspx.cs">
+      <DependentUpon>BalancePoTpAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BalancePoTpAdmin.aspx.designer.cs">
+      <DependentUpon>BalancePoTpAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Balance_Po_TP\BaseDal.cs" />
+    <Compile Include="Balance_Po_TP\KleckBLLTPs.cs" />
+    <Compile Include="Balance_Po_TP\ConvertTablesToOra.cs" />
+    <Compile Include="Balance_Po_TP\KleckOracleTpProvider.cs" />
+    <Compile Include="Balance_Po_TP\NesvBLLTPs.cs" />
+    <Compile Include="Balance_Po_TP\NesvOracleTpProvider.cs" />
+    <Compile Include="Balance_Po_TP\OplatiDetails.cs" />
+    <Compile Include="Balance_Po_TP\OracleOplati.cs" />
+    <Compile Include="Balance_Po_TP\StolbBLLTPs.cs" />
+    <Compile Include="Balance_Po_TP\StolbOracleTpProvider.cs" />
+    <Compile Include="Balance_Po_TP\TPDetails.cs" />
+    <Compile Include="Balance_Po_TP\UzdaBLLTPs.cs" />
+    <Compile Include="Balance_Po_TP\UzdaOracleTpProvider.cs" />
+    <Compile Include="Balance_Po_VL\DergBLLVLs.cs" />
+    <Compile Include="Balance_Po_VL\DergOracleVLProvider.cs" />
+    <Compile Include="Balance_Po_VL\KleckBLLVLs.cs" />
+    <Compile Include="Balance_Po_VL\KleckOracleVLProvider.cs" />
+    <Compile Include="Balance_Po_VL\NesvBLLVLs.cs" />
+    <Compile Include="Balance_Po_VL\NesvOracleVLProvider.cs" />
+    <Compile Include="Balance_Po_VL\OracleOplati.cs" />
+    <Compile Include="Balance_Po_VL\StolbBLLVLs.cs" />
+    <Compile Include="Balance_Po_VL\StolbOracleVLProvider.cs" />
+    <Compile Include="Balance_Po_VL\UzdaBLLVLs.cs" />
+    <Compile Include="Balance_Po_VL\UzdaOracleVLProvider.cs" />
+    <Compile Include="Balance_Po_VL\VLDetails.cs" />
+    <Compile Include="DergOplatiPoTp.aspx.cs">
+      <DependentUpon>DergOplatiPoTp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DergOplatiPoTp.aspx.designer.cs">
+      <DependentUpon>DergOplatiPoTp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DergSearchResults.aspx.cs">
+      <DependentUpon>DergSearchResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DergSearchResults.aspx.designer.cs">
+      <DependentUpon>DergSearchResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BytAbonent.cs" />
+    <Compile Include="KleckSearchResults.aspx.cs">
+      <DependentUpon>KleckSearchResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KleckSearchResults.aspx.designer.cs">
+      <DependentUpon>KleckSearchResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NesvSearchResults.aspx.cs">
+      <DependentUpon>NesvSearchResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NesvSearchResults.aspx.designer.cs">
+      <DependentUpon>NesvSearchResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sravnenie\SQL.cs" />
+    <Compile Include="StolbSearchResults.aspx.cs">
+      <DependentUpon>StolbSearchResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StolbSearchResults.aspx.designer.cs">
+      <DependentUpon>StolbSearchResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UzdaSearchResults.aspx.cs">
+      <DependentUpon>UzdaSearchResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UzdaSearchResults.aspx.designer.cs">
+      <DependentUpon>UzdaSearchResults.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sravnenie\BLL.cs" />
+    <Compile Include="App_Service\ConfigurationHelper.cs" />
+    <Compile Include="App_Service\Constants.cs" />
+    <Compile Include="DergBalancePoTp.aspx.cs">
+      <DependentUpon>DergBalancePoTp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DergBalancePoTp.aspx.designer.cs">
+      <DependentUpon>DergBalancePoTp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DergBalancePoVL.aspx.cs">
+      <DependentUpon>DergBalancePoVL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DergBalancePoVL.aspx.designer.cs">
+      <DependentUpon>DergBalancePoVL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DergOplatiPoVL.aspx.cs">
+      <DependentUpon>DergOplatiPoVL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DergOplatiPoVL.aspx.designer.cs">
+      <DependentUpon>DergOplatiPoVL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="KleckBalancePoTp.aspx.cs">
+      <DependentUpon>KleckBalancePoTp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KleckBalancePoTp.aspx.designer.cs">
+      <DependentUpon>KleckBalancePoTp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sravnenie\DAL.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KleckBalancePoVL.aspx.cs">
+      <DependentUpon>KleckBalancePoVL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KleckBalancePoVL.aspx.designer.cs">
+      <DependentUpon>KleckBalancePoVL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KleckOplatiPoVL.aspx.cs">
+      <DependentUpon>KleckOplatiPoVL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KleckOplatiPoVL.aspx.designer.cs">
+      <DependentUpon>KleckOplatiPoVL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KleckOplatiPoTp.aspx.cs">
+      <DependentUpon>KleckOplatiPoTp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KleckOplatiPoTp.aspx.designer.cs">
+      <DependentUpon>KleckOplatiPoTp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogsManagement\Logger.cs" />
+    <Compile Include="LogViewProgramm.aspx.cs">
+      <DependentUpon>LogViewProgramm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogViewProgramm.aspx.designer.cs">
+      <DependentUpon>LogViewProgramm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NesvBalancePoTp.aspx.cs">
+      <DependentUpon>NesvBalancePoTp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NesvBalancePoTp.aspx.designer.cs">
+      <DependentUpon>NesvBalancePoTp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NesvBalancePoVL.aspx.cs">
+      <DependentUpon>NesvBalancePoVL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NesvBalancePoVL.aspx.designer.cs">
+      <DependentUpon>NesvBalancePoVL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NesvOplatiPoVL.aspx.cs">
+      <DependentUpon>NesvOplatiPoVL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NesvOplatiPoVL.aspx.designer.cs">
+      <DependentUpon>NesvOplatiPoVL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NesvOplatiPoTp.aspx.cs">
+      <DependentUpon>NesvOplatiPoTp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NesvOplatiPoTp.aspx.designer.cs">
+      <DependentUpon>NesvOplatiPoTp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LogsManagement\ReadFromLog.cs" />
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sbyt.Master.cs">
+      <DependentUpon>Sbyt.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sbyt.Master.designer.cs">
+      <DependentUpon>Sbyt.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StolbBalancePoTp.aspx.cs">
+      <DependentUpon>StolbBalancePoTp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StolbBalancePoTp.aspx.designer.cs">
+      <DependentUpon>StolbBalancePoTp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StolbBalancePoVL.aspx.cs">
+      <DependentUpon>StolbBalancePoVL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StolbBalancePoVL.aspx.designer.cs">
+      <DependentUpon>StolbBalancePoVL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StolbOplatiPoVL.aspx.cs">
+      <DependentUpon>StolbOplatiPoVL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StolbOplatiPoVL.aspx.designer.cs">
+      <DependentUpon>StolbOplatiPoVL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StolbOplatiPoTp.aspx.cs">
+      <DependentUpon>StolbOplatiPoTp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StolbOplatiPoTp.aspx.designer.cs">
+      <DependentUpon>StolbOplatiPoTp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UzdaBalancePoTp.aspx.cs">
+      <DependentUpon>UzdaBalancePoTp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UzdaBalancePoTp.aspx.designer.cs">
+      <DependentUpon>UzdaBalancePoTp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UzdaBalancePoVL.aspx.cs">
+      <DependentUpon>UzdaBalancePoVL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UzdaBalancePoVL.aspx.designer.cs">
+      <DependentUpon>UzdaBalancePoVL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UzdaOplatiPoVL.aspx.cs">
+      <DependentUpon>UzdaOplatiPoVL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UzdaOplatiPoVL.aspx.designer.cs">
+      <DependentUpon>UzdaOplatiPoVL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UzdaOplatiPoTp.aspx.cs">
+      <DependentUpon>UzdaOplatiPoTp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UzdaOplatiPoTp.aspx.designer.cs">
+      <DependentUpon>UzdaOplatiPoTp.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sbyt.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\MainTheme\DefaultSkin.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>16256</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://passport:7756/</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

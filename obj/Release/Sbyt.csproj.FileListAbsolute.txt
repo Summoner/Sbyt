@@ -1,0 +1,6 @@
+D:\ASP\Sbyt\Sbyt\bin\Sbyt.dll
+D:\ASP\Sbyt\Sbyt\bin\Sbyt.pdb
+D:\ASP\Sbyt\Sbyt\bin\MyXls.SL2.dll
+D:\ASP\Sbyt\Sbyt\obj\Release\Sbyt.dll
+D:\ASP\Sbyt\Sbyt\obj\Release\Sbyt.pdb
+D:\ASP\Sbyt\Sbyt\obj\Release\Sbyt.csprojResolveAssemblyReference.cache
